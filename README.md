@@ -84,7 +84,7 @@ ProyectoFinal_IA/
 
 ```bash
 # 1. Clonar el repositorio
-git clone https://github.com/usuario/ProyectoFinal_IA.git
+git clone https://github.com/kevinqzg/ProyectoFinal_IA.git
 cd ProyectoFinal_IA
 
 # 2. Crear entorno virtual
@@ -94,10 +94,26 @@ source venv/bin/activate        # macOS/Linux
 
 # 3. Instalar dependencias
 pip install -r requirements.txt
+```
 
-# 4. Descargar datasets desde MEData y ubicarlos en:
-#    data/raw/consolidado_cantidad_casos_criminalidad_en_comunas_por_anio.csv
-#    data/raw/Mede_Victimas_inci.csv
+## Descarga de Datasets
+
+Los datasets necesarios para ejecutar el proyecto se encuentran disponibles en Google Drive:
+
+[Descargar datasets del proyecto](https://drive.google.com/drive/folders/140SgmuC5wX05UDEZ-vrpldmsWGR0jQE-?usp=sharing&utm_source=chatgpt.com)
+
+Después de descargarlos, ubícalos dentro de la carpeta:
+
+```text
+data/raw/
+```
+
+Estructura esperada:
+
+```text
+data/raw/
+├── consolidado_cantidad_casos_criminalidad_en_comunas_por_anio.csv
+└── Mede_Victimas_inci.csv
 ```
 
 ---
