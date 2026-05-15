@@ -30,7 +30,7 @@ El sistema integra información histórica de criminalidad e incidentes viales p
 
 ## Tecnologías Utilizadas
 
-- Python 3.11+
+- Python 3.13+
 - Pandas, NumPy
 - Scikit-learn, XGBoost, SHAP
 - Matplotlib, Seaborn
@@ -51,7 +51,7 @@ Datos obtenidos desde **MEData** — portal de datos abiertos de la Alcaldía de
 | Criminalidad por comunas | 2015–2023 | Secretaría de Seguridad SISC |
 | Víctimas en incidentes viales | 2015–2021 | Secretaría de Movilidad |
 
-> Los datasets originales no se incluyen en el repositorio por su tamaño. Ver sección de instalación.
+> Los datasets originales no se incluyen en el repositorio por su tamaño.
 
 ---
 
@@ -98,17 +98,11 @@ pip install -r requirements.txt
 
 ## Descarga de Datasets
 
-Los datasets necesarios para ejecutar el proyecto se encuentran disponibles en Google Drive:
+Los datasets necesarios están disponibles en Google Drive:
 
-[Descargar datasets del proyecto](https://drive.google.com/drive/folders/140SgmuC5wX05UDEZ-vrpldmsWGR0jQE-?usp=sharing&utm_source=chatgpt.com)
+[Descargar datasets del proyecto](https://drive.google.com/drive/folders/140SgmuC5wX05UDEZ-vrpldmsWGR0jQE-?usp=sharing)
 
-Después de descargarlos, ubícalos dentro de la carpeta:
-
-```text
-data/raw/
-```
-
-Estructura esperada:
+Ubícalos en:
 
 ```text
 data/raw/
@@ -138,6 +132,37 @@ Orden recomendado:
 **Bloque 2 — ML Clásico:** comparación de Baseline → Árbol de Decisión → Random Forest → XGBoost. Explicabilidad con SHAP.
 
 **Bloque 3 — RAG:** indexación de datos en ChromaDB con embeddings BAAI/bge-m3. LLM LLaMA 3.1 vía Groq para respuestas en lenguaje natural. Evaluación con RAGAS.
+
+---
+
+## Resultados
+
+### Análisis Exploratorio
+
+**Criminalidad por año — comunas 1 a 16**
+![Delitos por año](reports/figures/viz2_delitos_por_anio.png)
+
+**Heatmap de criminalidad por comuna y año**
+![Heatmap criminalidad](reports/figures/viz3_heatmap_criminalidad.png)
+
+**Víctimas en incidentes viales por año**
+![Viales por año](reports/figures/viz5_viales_por_anio.png)
+
+**Variable objetivo — nivel de bienestar**
+![Variable objetivo](reports/figures/viz1_variable_objetivo.png)
+
+---
+
+### Modelado
+
+**Comparación de modelos**
+![Comparación modelos](reports/figures/viz9_comparacion_modelos.png)
+
+**Matriz de confusión — XGBoost**
+![Matriz de confusión](reports/figures/viz10_confusion_matrix.png)
+
+**Importancia de features — SHAP**
+![SHAP](reports/figures/viz11_shap_importance.png)
 
 ---
 
