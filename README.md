@@ -137,7 +137,7 @@ Orden recomendado:
 
 **Bloque 2 — ML Clásico:** comparación de Baseline → Árbol de Decisión → Random Forest → XGBoost. Explicabilidad con SHAP.
 
-**Bloque 4 — RAG:** indexación de datos en ChromaDB con embeddings BAAI/bge-m3. LLM LLaMA 3.1 vía Groq para respuestas en lenguaje natural. Evaluación con RAGAS.
+**Bloque 3 — RAG:** indexación de datos en ChromaDB con embeddings BAAI/bge-m3. LLM LLaMA 3.1 vía Groq para respuestas en lenguaje natural. Evaluación con RAGAS.
 
 ---
 
