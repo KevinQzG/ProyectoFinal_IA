@@ -12,6 +12,12 @@ El sistema integra información histórica de criminalidad e incidentes viales p
 
 ---
 
+## 🎥 Video Demo
+
+[![Video Demo](https://img.youtube.com/vi/_XIa7Wb7RyE/0.jpg)](https://youtu.be/_XIa7Wb7RyE)
+
+---
+
 ## Pregunta de Investigación
 
 ¿Puede un modelo de ML predecir el nivel de bienestar de una comuna de Medellín cruzando indicadores de criminalidad y accidentalidad vial, con un F1-macro superior al baseline, y puede un sistema RAG responder preguntas ciudadanas sobre esos datos con alta fidelidad?
@@ -69,10 +75,12 @@ ProyectoFinal_IA/
 │   ├── 02_modeling.ipynb    # Entrenamiento y evaluación de modelos
 │   └── 03_rag.ipynb         # Sistema RAG con ChromaDB + Groq
 │
-├── reports/
-│   └── figures/             # Visualizaciones generadas
+├── docs/
+│   ├── informe_final.pdf    # Informe compilado en LaTeX
+│   └── guia_usuario.md      # Guía de uso del sistema
 │
-├── src/                     # Módulos reutilizables
+├── reports/figures/         # Visualizaciones generadas
+├── src/
 ├── requirements.txt
 ├── README.md
 └── .gitignore
@@ -94,13 +102,16 @@ source venv/bin/activate        # macOS/Linux
 
 # 3. Instalar dependencias
 pip install -r requirements.txt
+
+# 4. Crear archivo .env con tu API key de Groq
+echo "GROQ_API_KEY=tu_api_key_aqui" > .env
 ```
 
 ## Descarga de Datasets
 
 Los datasets necesarios están disponibles en Google Drive:
 
-[Descargar datasets del proyecto](https://drive.google.com/drive/folders/140SgmuC5wX05UDEZ-vrpldmsWGR0jQE-?usp=sharing)
+[Descargar datasets del proyecto](https://drive.google.com/drive/folders/140SgmuC5wX05UDEZ-vrpldmsWGR0jQE-)
 
 Ubícalos en:
 
@@ -131,7 +142,7 @@ Orden recomendado:
 
 **Bloque 2 — ML Clásico:** comparación de Baseline → Árbol de Decisión → Random Forest → XGBoost. Explicabilidad con SHAP.
 
-**Bloque 3 — RAG:** indexación de datos en ChromaDB con embeddings BAAI/bge-m3. LLM LLaMA 3.1 vía Groq para respuestas en lenguaje natural. Evaluación con RAGAS.
+**Bloque 3 — RAG:** indexación de datos en ChromaDB con embeddings BAAI/bge-m3. LLM LLaMA 3.1 vía Groq para respuestas en lenguaje natural.
 
 ---
 
@@ -151,8 +162,6 @@ Orden recomendado:
 **Variable objetivo — nivel de bienestar**
 ![Variable objetivo](reports/figures/viz1_variable_objetivo.png)
 
----
-
 ### Modelado
 
 **Comparación de modelos**
@@ -168,10 +177,10 @@ Orden recomendado:
 
 ## Equipo
 
-| Integrante | Rol |
-|---|---|
-| Kevin Quiroz González | EDA, preprocesamiento, modelado |
-| Carlos Alberto Mazo Gil | RAG, evaluación, informe |
+| Integrante | Correo | Rol |
+|---|---|---|
+| Kevin Quiroz González | kquirozg@eafit.edu.co | EDA, preprocesamiento, modelado |
+| Carlos Alberto Mazo Gil | camazog1@eafit.edu.co | RAG, evaluación, informe |
 
 ---
 
